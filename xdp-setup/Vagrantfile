@@ -8,10 +8,10 @@ Vagrant.configure("2") do |config|
     config.vm.hostname = "learn-xdp"
     config.vm.define "learn-xdp"
 
-    config.vm.network :forwarded_port, guest: 22, host: 2202, id: 'ssh'
+    config.vm.network :forwarded_port, guest: 22, host: 2302, id: 'ssh'
 
     # config.vm.synced_folder "../data", "/vagrant_data"
   
-    # config.vm.provision "shell", path: "scripts/install-libbpf.sh"
+    config.vm.provision "shell", path: "scripts/install-libbpf.sh"
   end
   
